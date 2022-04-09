@@ -1,5 +1,6 @@
 (ns user
   (:require [clojure.data.json :as json]
+            [clojure.pprint :refer [pprint]]
             [clojure.edn :as edn]
             [com.walmartlabs.lacinia.util :refer [attach-resolvers]]
             [com.walmartlabs.lacinia :refer [execute]]
@@ -21,8 +22,11 @@
 ;; 1.1 books
 (def books (->  (slurp "resources/data/books.json")
                 (json/read-str :key-fn keyword)
-                (index-by :Id)))
-
+                #_(index-by :Id)))
+(comment
+  (pprint books)
+  (pprint (first books))
+  (count (first books)))
 ;; 1.2 characters
 (def characters (count (json/read-str (slurp "resources/data/characters.json")
                                       :key-fn keyword)))
