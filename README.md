@@ -18,6 +18,15 @@ Modules
 - **Module 2: Project Introduction: Game Of Thrones DataSet**
   - 2.1: Import Data
   - 2.2: Understanding Data Part 1 - `books.json`
+  - Exercise: Understanding `houses.json` + `characters.json`
+
+- **Module 3: Getting Started with GraphQL and Lacinia**
+  - 3.1: What is GraphQL
+  - 3.2: What is Lacinia
+  - 3.3: Initial Schema
+  - 3.4: schema namespace
+  - 3.5. user namespace
+
 
 
 For detailed notes for each modules, please check `notes` directory

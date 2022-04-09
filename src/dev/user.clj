@@ -2,14 +2,10 @@
   (:require [clojure.data.json :as json]
             [clojure.pprint :refer [pprint]]
             [clojure.edn :as edn]
-            [com.walmartlabs.lacinia.util :refer [attach-resolvers]]
             [com.walmartlabs.lacinia :refer [execute]]
-            [com.walmartlabs.lacinia.schema :as schema]))
+            [got.schema :refer [load-schema]]))
 
-;; Helper functions
-(defn index-by [coll key-fn]
-  (into {} (map (juxt key-fn identity) coll)))
-
+;; ==== Tutorial Start
 ;; Tutorial: Getting Started with GraphQL and Clojure
 ;; A game of thrones example
 
@@ -37,8 +33,6 @@
 
 ;; - Step 2: Install Lacinia + Restart REPL - DONE
 ;; - Step 3: Create basic schema: Book - DONE
-
-
 ;; - Step 4: Create resolvers and schema
 (comment
   (schema/compile (attach-resolvers (edn/read-string (slurp "resources/schema.edn"))
@@ -47,29 +41,18 @@
   (clojure.repl/doc attach-resolvers)
   (clojure.repl/doc schema/compile))
 
-()
-(defn get-book [context {:keys [id]} value]
-  (get books id))
+;; ============ Tutorial END
+(comment
+  (load-schema))
+
+(def got-schema (load-schema))
 
 
-;; resolvers
-(def resolvers {:get-book get-book})
+(defn q
+  [query-string]
+  (execute got-schema query-string nil nil))
 
-
-(def got-schema
-  (-> (slurp "resources/schema.edn")
-      edn/read-string
-      (attach-resolvers resolvers)
-      schema/compile))
-
-
-;; Step 5: Test the resolver
+;; Test the resolver
 (comment
   (clojure.repl/doc execute)
-  (execute got-schema
-           "{ book_by_id(id: 11) { Id Name }}"
-           nil
-           nil))
-
-
-;; Step 6: Make get-book more dynamic
+  (q "{ book_by_id(id: 11) { Id Name }}"))

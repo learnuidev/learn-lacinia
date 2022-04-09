@@ -11,6 +11,8 @@
 > touch deps.edn
 ```
 
+Our first step is to fill in a few details, including the dependency on Lacinia:
+
 
 ```clj
 ;; deps.edn
@@ -28,11 +30,14 @@
 
 ### 1.2 Add source directories
 
-1. We will add our clojure code inside main directory
+1. Core business logic will live inside `main` directory
 2. We have three dependencies
-3. We have two aliases
-- dev
-- repl - which starts repl in port 7777
+   - clojure
+   - lacinia   - graphql library for clojure
+   - data.json - contains functions for dealing with json
+3. We have two aliases:
+   - :dev - loads all the files inside `src/dev` i.e you an run code snippets inside `user.clj`
+   - :repl - which starts repl in port 7777
 
 
 Next lets create `src`, `main` and `dev` directories
