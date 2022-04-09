@@ -1,4 +1,6 @@
-# Getting Started with Clojure and GraphQL: Learn to Create GraphQL Server Tutorial
+# Getting Started with Clojure and GraphQL:
+
+### Learn how to Create GraphQL Server using Clojure
 
 In this tutorial I will show you how to create a GraphQL server in Clojure from scratch
 
