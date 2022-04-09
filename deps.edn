@@ -1,0 +1,27 @@
+{:paths
+ ["src/main"]
+ :deps
+ {org.clojure/clojure {:mvn/version "1.10.3"}
+  ring/ring {:mvn/version "1.9.4"}
+  integrant/integrant {:mvn/version "0.8.0"}
+  environ/environ {:mvn/version "1.2.0"}
+  metosin/reitit {:mvn/version "0.5.15"}
+  clj-http/clj-http {:mvn/version "3.12.3"}
+  ovotech/ring-jwt {:mvn/version "2.2.1"}
+  org.clojure/data.json {:mvn/version "2.4.0"}
+  com.walmartlabs/lacinia {:mvn/version "1.2-alpha-1"}}
+
+ :aliases
+
+ {:dev {:extra-paths ["src/dev"]
+        :extra-deps {com.datomic/dev-local {:mvn/version "1.0.242"}
+                     integrant/repl {:mvn/version "0.3.2"}
+                     weavejester/dependency {:mvn/version "0.2.1"}}}
+  ;; Allow novus to accept external REPL clients via a local connection to port 7777.
+  :repl {:jvm-opts ["-Dclojure.server.repl={:port 7777 :accept clojure.core.server/repl}"]}
+  :test
+  {:extra-paths ["src/test"]
+   :extra-deps {com.datomic/dev-local {:mvn/version "1.0.242"}
+                ring/ring-mock {:mvn/version "0.4.0"}
+                integrant/repl {:mvn/version "0.3.2"}
+                weavejester/dependency {:mvn/version "0.2.1"}}}}}
