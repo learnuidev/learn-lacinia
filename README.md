@@ -1,19 +1,32 @@
 # Getting Started with Clojure and GraphQL:
 
-### Learn how to Create GraphQL Server using Clojure
+Author: Vishal Gautam
+Date: 9th April 2022
 
-In this tutorial I will show you how to create a GraphQL server in Clojure from scratch
+*Learn how to Create GraphQL Server using Clojure and Lacinia*
+
+In this tutorial I will show you how to create a GraphQL server in Clojure and Lacinia.
 
 Modules
-Module 1: Create deps.edn project
+
+- **Module 1: Create `deps.edn` project**
+  - 1.1: Configure deps.edn
+  - 1.2: Add source directories
+  - 1.3: `user.clj` and `core.clj`
+  - 1.4: 🔥 up the nREPL
+
+- **Module 2: Project Introduction: Game Of Thrones DataSet**
+  - 2.1: Import Data
+  - 2.2: Understanding Data Part 1 - `books.json`
+
+
+## Module 1: Create deps.edn project
+
 - In this module you will learn how to create a clojure deps.edn project
 - You will learn the basics of deps.edn, REPL Driven Development
 - By the end of this module you will be ready to start coding
 
-Module 2: Project Introduction: Game Of Thrones
-- In this module, you will import game of thrones data from my old node project into this new clojure project. Data for the project is found [here](https://github.com/vishalgautamm/graphQLofFireAndIce/tree/master/src/data)
-
-## Module 1: Create deps.edn project
+### 1.1 Configure deps.edn
 
 ```
 > mkdir clj_got && cd clj_got
@@ -35,6 +48,8 @@ Module 2: Project Introduction: Game Of Thrones
 
 ```
 
+### 1.2 Add source directories
+
 1. We will add our clojure code inside main directory
 2. We have three dependencies
 3. We have two aliases
@@ -50,7 +65,9 @@ Next lets create `src`, `main` and `dev` directories
 
 ```
 
-Create `user.clj` under dev
+### 1.3 Add `user.clj` and `core.clj`
+
+Create `user.clj` under `dev`
 ```clj
 (ns user)
 ```
@@ -63,30 +80,35 @@ Create `got/core.clj` root namespace under `main`
 
 ```
 
+### 1.4 🔥 up the REPL
+
 Finally lets fire up the REPL
 
 ```
 > clj -A:dev:repl
 ```
 
+
 Now we are ready to import data
 
-## Module 2: Import Data
+## Module 2: Project Introduction: Game Of Thrones DataSet
 
-Create a new directory called resources/data
+In this module, you will import game of thrones data from my old node project into this new clojure project. Data for the project is found [here](https://github.com/vishalgautamm/graphQLofFireAndIce/tree/master/src/data)
+
+
+### 2.1: Import Data
+
+Go to this [link](https://github.com/vishalgautamm/graphQLofFireAndIce/tree/master/src/data) and download `books.json`, `characters.json` and `houses.json` json files and save it inside `resources/data` directory.
 
 ```
 > mkdir resources/data
 
 ```
 
-Go to this [link](https://github.com/vishalgautamm/graphQLofFireAndIce/tree/master/src/data) and download `books.json`, `characters.json` and `houses.json` json files and save it inside `data`.
+Now that we have downloaded all the data, it's time to funny understand it.
 
-Once done, let's start inspecting the data. We will go to `user.clj` to inspect it. Let's first connect to the REPL. It should be running on port 7777 (assuming followed Module 1)
 
-Now its time to understand our data
-
-### 2.2 Understanding Data: Books
+### 2.2 Understanding Data: `books.json`
 
 Lets start by importing our first dependency - `clojure.data.json`
 
