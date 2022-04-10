@@ -33,8 +33,8 @@ Modules
 
 <!-- https://about.gitlab.com/handbook/markdown-guide/#display-local-videos-html5 -->
 <figure class="video_container">
-  <video width="600" height="240" controls="true" allowfullscreen="true" poster="path/to/poster_image.png">
-    <source src="playground.mov" type="video/mp4">
+  <video width="600" height="240" controls="true" allowfullscreen="true">
+    <source src="./playground.mp4" type="video/mp4">
   </video>
 </figure>
 
