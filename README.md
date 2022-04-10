@@ -31,7 +31,10 @@ Modules
   - 4.1: Basic GraphQL ring server
   - 4.2: Setting up Voyager and GraphQL Playground
 
-  ![](playground.mp4)
+
+<video width="600" height="240" controls>
+  <source src="playground.mov" type="video/mp4">
+</video>
 
 
 For detailed notes for each modules, please check `notes` directory
