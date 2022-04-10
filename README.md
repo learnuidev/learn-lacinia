@@ -31,5 +31,7 @@ Modules
   - 4.1: Basic GraphQL ring server
   - 4.2: Setting up Voyager and GraphQL Playground
 
+  ![](playground.mp4)
+
 
 For detailed notes for each modules, please check `notes` directory
