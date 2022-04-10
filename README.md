@@ -27,6 +27,9 @@ Modules
   - 3.4: schema namespace
   - 3.5. user namespace
 
+- **Module 4: Ring, Reitit Server + Voyager + Playground** 📚
+  - 4.1: Basic GraphQL ring server
+  - 4.2: Setting up Voyager and GraphQL Playground
 
 
 For detailed notes for each modules, please check `notes` directory
