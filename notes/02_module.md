@@ -12,7 +12,25 @@ Go to this [link](https://github.com/vishalgautamm/graphQLofFireAndIce/tree/mast
 
 ```
 
-Now that we have downloaded all the data, it's time to funny understand it.
+Before we go ahead and inspect the data, lets go to `deps.edn` and add "resources" to paths
+
+
+```clj
+
+{:paths ["src/main" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        com.walmartlabs/lacinia {:mvn/version "1.2-alpha-1"}
+        org.clojure/data.json {:mvn/version "2.4.0"}}
+
+ :aliases
+  {:dev {:extra-paths ["src/dev"]}
+   ;; Allow the app to accept external REPL clients via a local connection to port 7777.
+   :repl {:jvm-opts ["-Dclojure.server.repl={:port 7777 :accept clojure.core.server/repl}"]}}}
+
+
+```
+
+Now that we have downloaded all the data, and updated `deps.edn` it's time to funny understand it.
 
 
 ### 2.2 Understanding Data Part 1: `books.json`
