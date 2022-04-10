@@ -55,13 +55,21 @@ Create `user.clj` under `dev`
 (ns user)
 ```
 
-Create `got/core.clj` root namespace under `main`
+First create `got` directory under main `main`. This will be our root namespace.
+
+Then create `core.clj`
+
 ```
 > cd main
 > mkdir got && cd got
 > touch core.clj
 
 ```
+
+```clj
+(ns got.core)
+```
+
 
 ### 1.4 🔥 up the REPL
 

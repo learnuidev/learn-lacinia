@@ -1,0 +1,9 @@
+{:paths ["src/main"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        com.walmartlabs/lacinia {:mvn/version "1.2-alpha-1"}
+        org.clojure/data.json {:mvn/version "2.4.0"}}
+
+ :aliases
+  {:dev {:extra-paths ["src/dev"]}
+   ;; Allow the app to accept external REPL clients via a local connection to port 7777.
+   :repl {:jvm-opts ["-Dclojure.server.repl={:port 7777 :accept clojure.core.server/repl}"]}}}
