@@ -2,7 +2,6 @@
 
 ## 3.1 What is GraphQL?
 
-
 ## 3.2 What is Lacinia?
 
 ## 3.3 Initial Schema
