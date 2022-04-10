@@ -31,12 +31,6 @@ Modules
   - 4.1: Basic GraphQL ring server
   - 4.2: Setting up Voyager and GraphQL Playground
 
-<!-- https://about.gitlab.com/handbook/markdown-guide/#display-local-videos-html5 -->
-<figure class="video_container">
-  <video width="600" height="240" controls="true" allowfullscreen="true">
-    <source src="/playground.mp4" type="video/mp4">
-  </video>
-</figure>
-
+https://user-images.githubusercontent.com/67298065/162627731-1ad6566e-a096-4de5-9476-b92c88cc3038.mp4
 
 For detailed notes for each modules, please check `notes` directory
