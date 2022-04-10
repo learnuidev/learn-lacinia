@@ -33,7 +33,7 @@ Modules
 
 
 <video width="600" height="240" controls>
-  <source src="playground.mov" type="video/mp4">
+  <source src="./playground.mov" type="video/mp4">
 </video>
 
 
