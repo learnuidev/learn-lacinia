@@ -34,3 +34,9 @@ Modules
 https://user-images.githubusercontent.com/67298065/162627731-1ad6566e-a096-4de5-9476-b92c88cc3038.mp4
 
 For detailed notes for each modules, please check `notes` directory
+
+- **Module 5: Adding Houses and Characters** 📚
+  - 5.1: Schema changes
+  - 4.2: Code changes
+  - 5.3: Testing it out
+  - 5.4: Summary

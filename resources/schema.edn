@@ -22,8 +22,30 @@
           :FollowedBy {:type Int
                        :description "Next Book ID"}
           :PrecededById {:type Int
-                         :description "Previous Book ID"}}}}
+                         :description "Previous Book ID"}}}
+  :House {:description "Houses that exist in Game of thrones"
+          :fields
+          {:Id {:type Int
+                :description "The ID of the House"}
+           :Name {:type String
+                  :description "The name of the House"}}}
+  :Character {:description "Characters from Game of thrones"
+              :fields
+              {:Id {:type Int
+                    :description "The ID of the Character"}
+               :Name {:type String
+                      :description "The name of the Character"}
+               :allegiances {:type (list :House)
+                             :description "Allegiance Houses"
+                             :resolve :Character/Allegiances}
+               :books {:type (list :Book)
+                       :description "List of books character featured in"
+                       :resolve :Character/Books}}}}
  :queries {:book_by_id
            {:type :Book
             :args {:id {:type Int}}
-            :resolve :query/book-by-id}}}
+            :resolve :query/book-by-id}
+           :character_by_id
+           {:type :Character
+            :args {:id {:type Int}}
+            :resolve :query/character-by-id}}}
