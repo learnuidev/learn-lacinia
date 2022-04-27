@@ -30,7 +30,7 @@ If this was a relational database, we’d likely have a join table between Chara
                              :description "Allegiance Houses"
                              :resolve :Character/Allegiances}}}}
                :books {:type (list :Books)
-                             :description "Allegiance Houses"
+                             :description "Book appeared"
                              :resolve :Character/Books}}}}
  :queries {:character_by_id
            {:type :Character
@@ -85,7 +85,7 @@ Likewise, we need another field resolver in the `Character` entity to figure out
   (pprint (first houses))
   (count (first houses)))
 
-;; == Houses Data ==
+;; == Characters Data ==
 (def characters (->  (slurp "resources/data/characters.json")
                      (json/read-str :key-fn keyword)
                      (index-by :Id)))
